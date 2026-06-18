@@ -290,7 +290,7 @@ export default function Win98Desktop() {
 
       {startOpen && (
         <aside className="start-menu" onClick={(event) => event.stopPropagation()}>
-          <div className="start-strip">Windows 98</div>
+          <div className="start-strip">Vfat 87</div>
           <div className="start-content">
             {baseIcons.map((icon) => (
               <button
