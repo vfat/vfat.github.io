@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
 import { Rnd } from 'react-rnd';
+import ResumeDocument from './ResumeDocument';
 
 type DesktopIcon = {
   id: string;
@@ -11,12 +12,14 @@ type DesktopIcon = {
   height: number;
   title: string;
   content: string;
+  type: 'text' | 'resume';
 };
 
 type WindowState = {
   id: string;
   title: string;
   content: string;
+  type: 'text' | 'resume';
   x: number;
   y: number;
   width: number;
@@ -36,6 +39,7 @@ const baseIcons: DesktopIcon[] = [
     title: 'My Computer',
     content:
       'Drive C:\\  (2.1 GB free of 4.0 GB)\\nDrive D:\\  CD-ROM\\nControl Panel\\nPrinters\\nDial-Up Networking',
+    type: 'text',
   },
   {
     id: 'documents',
@@ -48,6 +52,7 @@ const baseIcons: DesktopIcon[] = [
     title: 'My Documents',
     content:
       'welcome.txt\\nideas.doc\\nweekend-plan.rtf\\nwallpaper.bmp\\nlinks.url',
+    type: 'text',
   },
   {
     id: 'notepad',
@@ -60,18 +65,32 @@ const baseIcons: DesktopIcon[] = [
     title: 'Notepad',
     content:
       'hello from winlike desktop!\\n\\n- drag this window\\n- resize from any edge\\n- feel the late 90s energy',
+    type: 'text',
+  },
+  {
+    id: 'resume',
+    label: 'Resume.pdf',
+    icon: '/icons/resume.png',
+    x: 24,
+    y: 390,
+    width: 98,
+    height: 104,
+    title: 'Resume.pdf',
+    content: 'resume',
+    type: 'resume',
   },
   {
     id: 'credits',
     label: 'credits.txt',
     icon: '/icons/credits.png',
-    x: 24,
+    x: 140,
     y: 390,
     width: 98,
     height: 104,
     title: 'credits.txt - Notepad',
     content:
       'Inspired by: https://winbows98.github.io/\\nIcons: https://win98icons.alexmeub.com/\\nBuilt with: Astro + React + Tailwind\\nDate: April 14, 2026',
+    type: 'text',
   },
 ];
 
@@ -132,10 +151,11 @@ export default function Win98Desktop() {
           id: icon.id,
           title: icon.title,
           content: icon.content,
+          type: icon.type,
           x: 180 + offset,
           y: 96 + offset,
-          width: 440,
-          height: 280,
+          width: icon.type === 'resume' ? 640 : 440,
+          height: icon.type === 'resume' ? 480 : 280,
           z: nextZ,
         },
       ];
@@ -251,7 +271,11 @@ export default function Win98Desktop() {
               </button>
             </header>
             <div className="window-content">
-              <pre>{win.content}</pre>
+              {win.type === 'resume' ? (
+                <ResumeDocument />
+              ) : (
+                <pre>{win.content}</pre>
+              )}
             </div>
           </section>
         </Rnd>

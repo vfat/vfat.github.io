@@ -282,3 +282,105 @@ button:active {
 		width: min(88vw, 258px);
 	}
 }
+
+/* ===== Resume PDF Document ===== */
+.resume-document {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	background: #e8e8e8;
+}
+
+.resume-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0.3rem 0.6rem;
+	background: var(--win-panel);
+	border-bottom: 2px solid var(--win-panel-dark);
+	font-size: 12px;
+	flex-shrink: 0;
+}
+
+.resume-title {
+	font-weight: 700;
+	color: var(--win-blue);
+}
+
+.resume-page-indicator {
+	color: #555;
+}
+
+.resume-body {
+	flex: 1;
+	overflow-y: auto;
+	padding: 1.5rem;
+	background: #fff;
+}
+
+.resume-section {
+	margin-bottom: 1.2rem;
+}
+
+.resume-section-title {
+	font-size: 13px;
+	font-weight: 700;
+	color: var(--win-blue);
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 0.2rem;
+	margin-bottom: 0.4rem;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+}
+
+.resume-section-content {
+	font-family: "Lucida Console", monospace;
+	font-size: 12px;
+	line-height: 1.6;
+	white-space: pre-wrap;
+	margin: 0;
+	color: #222;
+}
+
+.resume-footer {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 1rem;
+	padding: 0.3rem;
+	background: var(--win-panel);
+	border-top: 2px solid var(--win-panel-dark);
+	flex-shrink: 0;
+}
+
+.resume-nav {
+	border-top: 2px solid var(--win-panel-light);
+	border-left: 2px solid var(--win-panel-light);
+	border-right: 2px solid var(--win-panel-deep);
+	border-bottom: 2px solid var(--win-panel-deep);
+	background: var(--win-panel);
+	padding: 0.15rem 0.5rem;
+	font-size: 11px;
+	cursor: pointer;
+	font-family: inherit;
+	color: inherit;
+}
+
+.resume-nav:disabled {
+	opacity: 0.4;
+	cursor: default;
+}
+
+.resume-page-dots {
+	display: flex;
+	gap: 0.25rem;
+	font-size: 10px;
+}
+
+.dot {
+	color: #999;
+}
+
+.dot.active {
+	color: var(--win-blue);
+}
