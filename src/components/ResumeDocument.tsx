@@ -14,7 +14,7 @@ const resumePages: Page[] = [
         content:
           'Senior Web & API Developer\n\n' +
           'Cimahi, Bandung, Indonesia, 40531\n' +
-          '+62818644684 | vickyfatrian@gmail.com\n' +
+          '| vickyfatrian@gmail.com\n' +
           'linkedin.com/in/vicky-fatrian-399386b6 | github.com/vfat',
       },
       {
