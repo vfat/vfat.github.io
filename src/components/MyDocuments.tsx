@@ -76,7 +76,7 @@ const MyDocuments: React.FC = () => {
           </div>
           <div className="tree-item">
             <span className="tree-icon">📁</span>
-            My Pictures
+            My Pictures.
           </div>
           <div className="tree-item">
             <span className="tree-icon">📁</span>
