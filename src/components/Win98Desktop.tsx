@@ -38,7 +38,17 @@ const baseIcons: DesktopIcon[] = [
     height: 104,
     title: 'My Computer',
     content:
-      'Drive C:\\  (2.1 GB free of 4.0 GB)\\nDrive D:\\  CD-ROM\\nControl Panel\\nPrinters\\nDial-Up Networking',
+      'Drive C:\\  (2.1 GB free of 4.0 GB)\n\n' +
+      '  My Documents\n' +
+      '  My Pictures\n' +
+      '  My Music\n' +
+      '  Downloads\n' +
+      '  Control Panel\n' +
+      '  Printers\n' +
+      '  Dial-Up Networking\n' +
+      '  Network Neighborhood\n' +
+      '  My Computer\n' +
+      '  My Network Places',
     type: 'text',
   },
   {
@@ -51,7 +61,13 @@ const baseIcons: DesktopIcon[] = [
     height: 104,
     title: 'My Documents',
     content:
-      'welcome.txt\\nideas.doc\\nweekend-plan.rtf\\nwallpaper.bmp\\nlinks.url',
+      'welcome.txt\n' +
+      'ideas.doc\n' +
+      'weekend-plan.rtf\n' +
+      'wallpaper.bmp\n' +
+      'links.url\n' +
+      'resume.pdf\n' +
+      'vfat.github.io',
     type: 'text',
   },
   {
